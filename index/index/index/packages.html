@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>لوفينغ هومز | الحزم | Packages</title>
+<link rel="preconnect" href="https://fonts.googleapis.com/">
+<link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;700&display=swap" rel="stylesheet">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🐾</text></svg>">
+<meta name="theme-color" content="#4a8a2a">
+<link rel="stylesheet" href="../../CSS/style.css">
+</head>
+<body>
+<div id="cursor"></div>
+<div id="cursor-ring"></div>
+
+<!-- NAV -->
+<nav id="nav" class="scrolled">
+  <a class="nav-logo" href="../index.html">
+    <div class="logo-mark">🐾</div>
+    <div class="logo-type">
+      <div class="logo-name"><span class="ar">لوفينغ هومز</span><span class="en">Loving Homes</span></div>
+      <div class="logo-sub"><span class="ar">فندق الكلاب · هونج كونج</span><span class="en">Dog Hotel · Hong Kong</span></div>
+    </div>
+  </a>
+  <ul class="nav-links">
+    <li><a href="about.html"><span class="ar">عن الفندق</span><span class="en">About</span></a></li>
+    <li><a href="services.html"><span class="ar">الخدمات</span><span class="en">Services</span></a></li>
+    <li><a href="packages.html"><span class="ar">الحزم</span><span class="en">Packages</span></a></li>
+    <li><a href="gallery.html"><span class="ar">الصور</span><span class="en">Gallery</span></a></li>
+    <li><a href="reviews.html"><span class="ar">الآراء</span><span class="en">Reviews</span></a></li>
+    <li><a href="contact.html"><span class="ar">تواصل معنا</span><span class="en">Contact</span></a></li>
+  </ul>
+  <div class="nav-actions">
+    <button class="nav-book" onclick="openModal('bookModal')">
+      <span class="ar">احجز الآن</span><span class="en">Book Now</span>
+    </button>
+    <button class="mob-btn" onclick="toggleDrawer()">☰</button>
+  </div>
+</nav>
+<div class="nav-drawer" id="navDrawer">
+  <a href="about.html" onclick="toggleDrawer()"><span class="ar">عن الفندق</span><span class="en">About</span></a>
+  <a href="services.html" onclick="toggleDrawer()"><span class="ar">الخدمات</span><span class="en">Services</span></a>
+  <a href="packages.html" onclick="toggleDrawer()"><span class="ar">الحزم</span><span class="en">Packages</span></a>
+  <a href="gallery.html" onclick="toggleDrawer()"><span class="ar">الصور</span><span class="en">Gallery</span></a>
+  <a href="reviews.html" onclick="toggleDrawer()"><span class="ar">الآراء</span><span class="en">Reviews</span></a>
+  <a href="contact.html" onclick="toggleDrawer()"><span class="ar">تواصل معنا</span><span class="en">Contact</span></a>
+</div>
+
+
+<!-- PACKAGES -->
+<section class="sec pkg-sec" id="packages">
+  <div class="sec-narrow">
+    <div class="tag ar">حزمنا</div><div class="tag en">Our Packages</div>
+    <h2 class="sec-title ar">اختر ما يناسب كلبك</h2>
+    <h2 class="sec-title en">Choose What Suits Your Dog</h2>
+    <p class="sec-sub ar">ثلاث حزم مصمّمة بعناية لكل احتياج — أو تواصل معنا لحزمة مخصصة كاملاً.</p>
+    <p class="sec-sub en">Three carefully designed packages for every need — or contact us for a fully custom plan.</p>
+    <div class="pkg-tabs-wrap">
+      <button class="pkg-tab on" onclick="filterPkg(&#39;all&#39;,this)"><span class="ar">الكل</span><span class="en">All</span></button>
+      <button class="pkg-tab" onclick="filterPkg(&#39;premium&#39;,this)"><span class="ar">المميزة</span><span class="en">Premium</span></button>
+      <button class="pkg-tab" onclick="filterPkg(&#39;classic&#39;,this)"><span class="ar">الكلاسيكية</span><span class="en">Classic</span></button>
+      <button class="pkg-tab" onclick="filterPkg(&#39;day&#39;,this)"><span class="ar">اليوم</span><span class="en">Day Stay</span></button>
+    </div>
+    <div class="pkg-grid">
+      <article class="pkg-card hot reveal in" data-type="premium" style="transition-delay: 0s;">
+        <div class="pkg-hot-tag">⭐ <span class="ar">الأكثر طلباً</span><span class="en">Most Popular</span></div>
+        <div class="pkg-name ar">المميزة</div><div class="pkg-name en">Premium</div>
+        <div class="pkg-tagline ar">لكلبك الذي يستحق الأفضل دائماً</div>
+        <div class="pkg-tagline en">For the dog who deserves only the best</div>
+        <ul class="pkg-list">
+          <li><span class="chk">✓</span><span class="ar">4 جلسات مشي / أنشطة يومياً</span><span class="en">4 walks / activities daily</span></li>
+          <li><span class="chk">✓</span><span class="ar">مساحة عشب خاصة حصرية</span><span class="en">Exclusive private grass area</span></li>
+          <li><span class="chk">✓</span><span class="ar">تحديثات وصور يومية</span><span class="en">Daily photos &amp; updates</span></li>
+          <li><span class="chk">✓</span><span class="ar">مكافآت مخصصة متفق عليها</span><span class="en">Customised treats as agreed</span></li>
+          <li><span class="chk">✓</span><span class="ar">أولوية قصوى في الحجز</span><span class="en">Top priority booking</span></li>
+        </ul>
+        <button class="btn-pkg btn-pkg-lime" onclick="choosePkg(&#39;premium&#39;)"><span class="ar">احجز الآن</span><span class="en">Book Now</span></button>
+      </article>
+      <article class="pkg-card reveal in" data-type="classic" style="transition-delay: 0.1s;">
+        <div class="pkg-name ar">الكلاسيكية</div><div class="pkg-name en">Classic</div>
+        <div class="pkg-tagline ar">التوازن المثالي بين الرعاية والمتعة</div>
+        <div class="pkg-tagline en">The perfect balance of care and fun</div>
+        <ul class="pkg-list">
+          <li><span class="chk">✓</span><span class="ar">3 جلسات مشي / أنشطة يومياً</span><span class="en">3 walks / activities daily</span></li>
+          <li><span class="chk">✓</span><span class="ar">حظيرة لعب داخلية</span><span class="en">Indoor play kennel</span></li>
+          <li><span class="chk">✓</span><span class="ar">منطقة استرخاء مريحة</span><span class="en">Comfortable relaxation area</span></li>
+          <li><span class="chk">✓</span><span class="ar">جلسة حلاقة وتنظيف</span><span class="en">Grooming &amp; cleaning session</span></li>
+        </ul>
+        <button class="btn-pkg btn-pkg-ghost" onclick="choosePkg(&#39;classic&#39;)"><span class="ar">احجز الآن</span><span class="en">Book Now</span></button>
+      </article>
+      <article class="pkg-card reveal in" data-type="day" style="transition-delay: 0.2s;">
+        <div class="pkg-name ar">اليوم</div><div class="pkg-name en">Day Stay</div>
+        <div class="pkg-tagline ar">رعاية يومية مثالية لأيام السفر</div>
+        <div class="pkg-tagline en">Perfect daily care for your travel days</div>
+        <ul class="pkg-list">
+          <li><span class="chk">✓</span><span class="ar">جلستا مشي يومياً</span><span class="en">2 walks daily</span></li>
+          <li><span class="chk">✓</span><span class="ar">منطقة لعب خارجية</span><span class="en">Outdoor play area</span></li>
+          <li><span class="chk">✓</span><span class="ar">مسار اللياقة البدنية</span><span class="en">Agility course</span></li>
+          <li><span class="chk">✓</span><span class="ar">حفر حفرة في الرمل 🐾</span><span class="en">Sand pit digging 🐾</span></li>
+        </ul>
+        <button class="btn-pkg btn-pkg-ghost" onclick="choosePkg(&#39;day&#39;)"><span class="ar">احجز الآن</span><span class="en">Book Now</span></button>
+      </article>
+    </div>
+    <p style="text-align:center;margin-top:2rem;color:rgba(200,230,160,.6);font-size:.9rem;">
+      <span class="ar">تحتاج حزمة خاصة؟</span><span class="en">Need something custom?</span>
+      <button onclick="G(&#39;contact&#39;)" style="background:none;border:none;color:var(--lime);font-weight:800;cursor:pointer;font-family:inherit;font-size:.9rem;">
+        <span class="ar">تواصل معنا ←</span><span class="en">Contact Us →</span>
+      </button>
+    </p>
+  </div>
+</section>
+
+
+
+<!-- CALL MODAL -->
+<div class="modal-bg" id="callModal" onclick="closeModal(&#39;callModal&#39;)">
+  <div class="modal-box" onclick="event.stopPropagation()">
+    <button class="m-close" onclick="closeModal(&#39;callModal&#39;)">✕</button>
+    <div class="m-ico">📞</div>
+    <div class="m-title ar">تواصل معنا</div><div class="m-title en">Contact Us</div>
+    <div class="m-sub ar">اختر طريقة التواصل — فريقنا جاهز دائماً</div>
+    <div class="m-sub en">Choose your preferred contact method — our team is always ready</div>
+    <div class="m-acts">
+      <a class="m-btn m-btn-p" href="tel:+85212345678">📞 +852 1234 5678</a>
+      <div class="m-div"><span class="ar">أو</span><span class="en">or</span></div>
+      <a class="m-btn m-btn-w" href="https://wa.me/85298765432" target="_blank">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"></path></svg>
+        WhatsApp +852 9876 5432
+      </a>
+      <div class="m-div"><span class="ar">أو</span><span class="en">or</span></div>
+      <button class="m-btn m-btn-o" onclick="closeModal(&#39;callModal&#39;);G(&#39;contact&#39;)">✉️ <span class="ar">أرسل رسالة</span><span class="en">Send Message</span></button>
+    </div>
+  </div>
+</div>
+
+<!-- BOOKING MODAL -->
+<div class="modal-bg" id="bookModal" onclick="closeModal(&#39;bookModal&#39;)">
+  <div class="modal-box" onclick="event.stopPropagation()">
+    <button class="m-close" onclick="closeModal(&#39;bookModal&#39;)">✕</button>
+    <div class="bk-steps" id="bkSteps">
+      <div class="bk-step cur" id="bs1"><div class="bk-step-n">1</div><div class="bk-step-l ar">الحزمة</div><div class="bk-step-l en">Package</div></div>
+      <div class="bk-step" id="bs2"><div class="bk-step-n">2</div><div class="bk-step-l ar">البيانات</div><div class="bk-step-l en">Details</div></div>
+      <div class="bk-step" id="bs3"><div class="bk-step-n">3</div><div class="bk-step-l ar">تأكيد</div><div class="bk-step-l en">Confirm</div></div>
+    </div>
+    <div class="bk-pane show" id="bp1">
+      <div class="m-title ar">اختر الحزمة</div><div class="m-title en">Choose Package</div>
+      <div class="m-sub" style="margin-bottom:1.2rem;"><span class="ar">ما الحزمة الأنسب لكلبك؟</span><span class="en">Which package suits your dog?</span></div>
+      <div class="bk-pkg-grid">
+        <div class="bk-pkg-opt sel" onclick="selPkg(this,&#39;premium&#39;)" data-p="premium"><div class="on">⭐ <span class="ar">المميزة</span><span class="en">Premium</span></div><div class="os ar">4 نزهات/يوم</div><div class="os en">4 walks/day</div></div>
+        <div class="bk-pkg-opt" onclick="selPkg(this,&#39;classic&#39;)" data-p="classic"><div class="on">🐾 <span class="ar">الكلاسيكية</span><span class="en">Classic</span></div><div class="os ar">3 نزهات/يوم</div><div class="os en">3 walks/day</div></div>
+        <div class="bk-pkg-opt" onclick="selPkg(this,&#39;day&#39;)" data-p="day"><div class="on">☀️ <span class="ar">اليوم</span><span class="en">Day Stay</span></div><div class="os ar">2 نزهات/يوم</div><div class="os en">2 walks/day</div></div>
+        <div class="bk-pkg-opt" onclick="selPkg(this,&#39;custom&#39;)" data-p="custom"><div class="on">✨ <span class="ar">مخصصة</span><span class="en">Custom</span></div><div class="os ar">حسب الطلب</div><div class="os en">On request</div></div>
+      </div>
+      <button class="m-btn m-btn-g" onclick="bkStep(2)"><span class="ar">التالي ←</span><span class="en">Next →</span></button>
+    </div>
+    <div class="bk-pane" id="bp2">
+      <div class="m-title ar">بيانات الحجز</div><div class="m-title en">Booking Details</div>
+      <div class="m-sub" style="margin-bottom:1.2rem;"><span class="ar">أدخل التواريخ ومعلوماتك</span><span class="en">Enter your dates and details</span></div>
+      <div class="bk-dates">
+        <div class="fld"><label><span class="ar">تاريخ الوصول</span><span class="en">Check-in</span></label><input class="bk-in" type="date" id="bkIn" min="2026-03-05"></div>
+        <div class="fld"><label><span class="ar">تاريخ المغادرة</span><span class="en">Check-out</span></label><input class="bk-in" type="date" id="bkOut" min="2026-03-05"></div>
+      </div>
+      <div class="fld"><label><span class="ar">اسمك</span><span class="en">Your Name</span></label><input class="bk-in" type="text" id="bkName" placeholder="..."></div>
+      <div class="fld"><label><span class="ar">رقم الهاتف</span><span class="en">Phone</span></label><input class="bk-in" type="tel" id="bkPhone" placeholder="+852 ..."></div>
+      <div style="display:flex;gap:.7rem;margin-top:.5rem;">
+        <button class="m-btn m-btn-o" style="width:auto;flex:0;padding:.9rem 1.3rem;" onclick="bkStep(1)"><span class="ar">← رجوع</span><span class="en">← Back</span></button>
+        <button class="m-btn m-btn-g" onclick="bkStep(3)"><span class="ar">مراجعة ←</span><span class="en">Review →</span></button>
+      </div>
+    </div>
+    <div class="bk-pane" id="bp3">
+      <div class="m-title ar">تأكيد الحجز</div><div class="m-title en">Confirm Booking</div>
+      <div class="bk-confirm" id="bkSummary"></div>
+      <div style="display:flex;gap:.7rem;">
+        <button class="m-btn m-btn-o" style="width:auto;flex:0;padding:.9rem 1.3rem;" onclick="bkStep(2)"><span class="ar">← رجوع</span><span class="en">← Back</span></button>
+        <button class="m-btn m-btn-g" onclick="confirmBk()">🐾 <span class="ar">تأكيد الحجز</span><span class="en">Confirm Booking</span></button>
+      </div>
+    </div>
+    <div class="bk-pane" id="bp4">
+      <div class="bk-ok">
+        <div class="ok-ico">✅</div>
+        <div class="m-title" style="margin-top:.8rem;"><span class="ar">تم الحجز بنجاح!</span><span class="en">Booking Confirmed!</span></div>
+        <p class="m-sub" style="margin-top:.5rem;margin-bottom:1.5rem;"><span class="ar">شكراً! سيتواصل معك فريقنا خلال 24 ساعة لتأكيد التفاصيل.</span><span class="en">Thank you! Our team will contact you within 24 hours to confirm details.</span></p>
+        <button class="m-btn m-btn-g" onclick="closeModal(&#39;bookModal&#39;)">🐾 <span class="ar">رائع، شكراً!</span><span class="en">Great, thank you!</span></button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="toast" id="toast">تم التبديل إلى العربية 🇸🇦</div>
+<button id="goTop" onclick="window.scrollTo({top:0,behavior:&#39;smooth&#39;})" class="vis">↑</button>
+
+<script src="../../JS/main.js"></script>
+
+</body></html>
+</body></html>
